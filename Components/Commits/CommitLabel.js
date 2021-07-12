@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
 	},
 	refactor: {
 		color: "#109488"
+	},
+	test: {
+		color: "#F49630"
 	}
 });
 

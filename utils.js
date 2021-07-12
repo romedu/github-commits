@@ -1,6 +1,6 @@
 export const getCommitHeaders = commitMessage => {
 	const headersDivider = ": ";
-	const validCommitLabels = ["feat", "fix", "chore", "style", "refactor"];
+	const validCommitLabels = ["feat", "fix", "chore", "style", "refactor", "test"];
 	let labelHeader = validCommitLabels[0];
 	let messageHeader = commitMessage;
 
