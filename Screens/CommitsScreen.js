@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, SafeAreaView, FlatList } from "react-native";
 import CommitCard from "../Components/Commits/CommitCard";
+import Loader from "../Components/UI/Loader";
 import TextHeader from "../Components/UI/TextHeader";
 import { BASE_API_URL } from "../constants";
 import useFetch from "../Hooks/useFetch";
@@ -30,6 +31,7 @@ const CommitsScreen = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<TextHeader> My Commits </TextHeader>
+			{isRefreshing && <Loader />}
 			<FlatList
 				data={commits}
 				keyExtractor={commit => commit.id}
