@@ -55,7 +55,8 @@ const CommitsScreen = () => {
 
 const styles = StyleSheet.create({
 	container: {
-		marginVertical: 60,
+		marginTop: 60,
+		marginBottom: 100,
 		marginHorizontal: 25
 	}
 });
