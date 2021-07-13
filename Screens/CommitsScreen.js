@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, SafeAreaView, FlatList } from "react-native";
+import { StyleSheet, SafeAreaView, FlatList, Alert } from "react-native";
 import CommitCard from "../Components/Commits/CommitCard";
 import Loader from "../Components/UI/Loader";
 import TextHeader from "../Components/UI/TextHeader";
@@ -23,8 +23,14 @@ const CommitsScreen = () => {
 				setCommits([...commits, ...fetchResult.commits]);
 				setRefreshingState(false);
 			};
+			const handleFailedFetch = error => {
+				const errorMessage = `${error.message}. Pressing "OK" will trigger another call`;
 
-			fetchCommits(null, handleSuccessfulFetch, () => console.log("error"));
+				setRefreshingState(false);
+				Alert.alert("Error", errorMessage, clearCommits);
+			};
+
+			fetchCommits(null, handleSuccessfulFetch, handleFailedFetch);
 		}
 	}, [isRefreshing, pageNum]);
 
