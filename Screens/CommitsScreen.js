@@ -27,7 +27,7 @@ const CommitsScreen = () => {
 				const errorMessage = `${error.message}. Pressing "OK" will trigger another call`;
 
 				setRefreshingState(false);
-				Alert.alert("Error", errorMessage, clearCommits);
+				Alert.alert("Error", errorMessage, [{ onPress: clearCommits }]);
 			};
 
 			fetchCommits(null, handleSuccessfulFetch, handleFailedFetch);
