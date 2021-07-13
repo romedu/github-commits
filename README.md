@@ -6,7 +6,7 @@ A simple mobile app used to show a list of commits from a particular repository
 
 ## Prerequisites
 
-To follow this guide you should have access to either an [iOS simulator](https://developer.apple.com/xcode/resources) or an [Android emulator](ahttps://developer.android.com/studio). Although you could run the application on a real device, this guide advises the use of a virtual device.
+To follow this guide you should have access to either an [iOS simulator](https://developer.apple.com/xcode/resources) or an [Android emulator](https://developer.android.com/studio). Although you could run the application on a real device, this guide advises the use of a virtual device.
 
 Another requirement for this app is have a running instance of the following [server](https://github.com/romedu/github-commits-api) on port 3000. For this current process [Node.js 10 or higher](https://nodejs.org) is required as well.
 
